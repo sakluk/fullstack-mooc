@@ -1,3 +1,19 @@
+const Header = (props) => {
+  return (
+    <div>
+      <h1>{props.name}</h1>
+    </div>
+  )
+}
+
+const Hello = () => {
+  return (
+    <div>
+      <p>Hello world</p>
+    </div>
+  )
+}
+
 const App = () => {
   const course = 'Half Stack application development'
   const part1 = 'Fundamentals of React'
@@ -9,7 +25,9 @@ const App = () => {
 
   return (
     <div>
-      <h1>{course}</h1>
+      <Header name='Half Stack application development'/>
+      <Hello />
+
       <p>
         {part1} {exercises1}
       </p>
@@ -25,3 +43,7 @@ const App = () => {
 }
 
 export default App
+
+// Tips:
+// Download the React DevTools for a better development experience:
+// https://react.dev/learn/react-developer-tools
