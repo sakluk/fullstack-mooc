@@ -23,7 +23,7 @@ Npm ympäristön asentaminen oli suoraviivaista, mutta aluksi asensin ympärist�
 
 Toinen ongelma on VSCoden Source Controlin käytössä. Koska käytän myös Metropolian omaa GitLabia, niin työkoneeni git-asetukset ovat jotenkin sekaisin. En saa synkronoitua tietoja GitHubiin suoraan VSCodesta, vaan joudun työntämään (Push) tiedot käyttäen Git gui:ta. Pieni, mutta ärsyttävä ongelma, jota en ole vielä kyennyt ratkaisemaan. Liittyy ilmeisesti siihen, mitä credential-manageria git käyttää.
 
-Ratkaisu tähän toiseen ongelmaan oli poistaa Windowsin credential managerista githubiin liittyvät avaimet, resetoida Git-konfiguraatio:
+Tätä ongelmaa yritin ratkaista poistamalla Windowsin credential managerista githubiin liittyvät avaimet, resetoida Git-konfiguraatio:
 ```bash
 git config --global --unset credential.helper
 git config --global --unset user.name
@@ -47,7 +47,18 @@ Tämän jälkeen annoin komentoikkunassa komennon:
 ```
 git push
 ```
-jolloin kysyttiin GitHubin salasanaa. Tässä kohtaa voi valita `token` ja kopioida avain tänne.
+jolloin kysyttiin GitHubin salasanaa. Tässä kohtaa voi valita `token` ja kopioida avain tänne. Tämänkin jälkeen, jos yritän synkronoida projektin VSCoden kautta, saan edelleen virheilmoituksen:
+```
+> git push origin main:main
+fatal: Unable to persist credentials with the 'wincredman' credential store.
+See https://aka.ms/gcm/credstores for more information.
+fatal: Unable to persist credentials with the 'wincredman' credential store.
+See https://aka.ms/gcm/credstores for more information.
+error: remote-curl: error reading command stream from git
+error: failed to push some refs to 'https://github.com/sakluk/fullstack-mooc.git'
+```
+
+Eli muutosten työntäminen Github-kansioon pitänee tehdä komentoriviltä.
 
 ## Mallipohja
 
