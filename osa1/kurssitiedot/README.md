@@ -19,7 +19,7 @@ Tässä kansiossa on esitetty omat palautukseni tehtäviin
 
 ## Haasteet ja pohdintoja
 
-Ympäristön asentaminen oli suoraviivaista, mutta aluksi asensin ympäristön kansioon `osa1`. Myöhemmin ymmärsin, että osalle 1a pitää luoda oma alikansio `osa1/kurssitiedot` ja tämän jälkeen menikin hetken aikaa ennenkuin keksin miten jo tehdyt harjoitukset sai kopioitua alikansioon. Vahingossa ehdin tehdä jo paikalliseen projektiin tallennuksen, jossa tuli mukaan koko `node_modules` kansio (7000+ tiedostoa). Jouduin palauttamaan tiedot Github-projektistani ja asentamaan npm:n uudestaan palautettuun kansioon.
+Npm ympäristön asentaminen oli suoraviivaista, mutta aluksi asensin ympäristön kansioon `osa1`. Myöhemmin ymmärsin, että osalle 1a pitää luoda oma alikansio `osa1/kurssitiedot` ja tämän jälkeen menikin hetken aikaa ennenkuin keksin miten jo tehdyt harjoitukset sai kopioitua alikansioon. Vahingossa ehdin tehdä jo paikalliseen projektiin tallennuksen, jossa tuli mukaan koko `node_modules` kansio (7000+ tiedostoa). Jouduin palauttamaan tiedot Github-projektistani ja asentamaan npm:n uudestaan palautettuun kansioon.
 
 Toinen ongelma on VSCoden Source Controlin käytössä. Koska käytän myös Metropolian omaa GitLabia, niin työkoneeni git-asetukset ovat jotenkin sekaisin. En saa synkronoitua tietoja GitHubiin suoraan VSCodesta, vaan joudun työntämään (Push) tiedot käyttäen Git gui:ta. Pieni, mutta ärsyttävä ongelma, jota en ole vielä kyennyt ratkaisemaan. Liittyy ilmeisesti siihen, mitä credential-manageria git käyttää.
 
