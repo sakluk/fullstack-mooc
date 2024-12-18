@@ -23,6 +23,32 @@ Npm ympäristön asentaminen oli suoraviivaista, mutta aluksi asensin ympärist�
 
 Toinen ongelma on VSCoden Source Controlin käytössä. Koska käytän myös Metropolian omaa GitLabia, niin työkoneeni git-asetukset ovat jotenkin sekaisin. En saa synkronoitua tietoja GitHubiin suoraan VSCodesta, vaan joudun työntämään (Push) tiedot käyttäen Git gui:ta. Pieni, mutta ärsyttävä ongelma, jota en ole vielä kyennyt ratkaisemaan. Liittyy ilmeisesti siihen, mitä credential-manageria git käyttää.
 
+Ratkaisu tähän toiseen ongelmaan oli poistaa Windowsin credential managerista githubiin liittyvät avaimet, resetoida Git-konfiguraatio:
+```bash
+git config --global --unset credential.helper
+git config --global --unset user.name
+git config --global --unset user.email
+```
+ja lopuksi luoda hakemistokohtaiset käyttäjätunnukset:
+```
+cd /path/to/your/repository
+git config user.name "Your Name"
+git config user.email "your.email@example.com"
+```
+Lisäksi loin henkilökohtaisen pääsyavaimen (Personal Access Token, PAT) Githubissa:
+
+1. Avaa GitHub tilin asetukset (settings).
+2. Avaa Developer settings (löytyy pohjalta )> Personal access tokens.
+3. Klikkaa Generate new token.
+4. Valitse laajuus (scopes, permissions, repo), jolle avain tarvitaan.
+5. Tallenna avain (token) hyvää talteen.
+
+Tämän jälkeen annoin komentoikkunassa komennon:
+```
+git push
+```
+jolloin kysyttiin GitHubin salasanaa. Tässä kohtaa voi valita `token` ja kopioida avain tänne.
+
 ## Mallipohja
 
 Ohjeiden mukaan pohjaksi asentuu [React](https://react.dev/) + [Vite](https://vite.dev/) mallipohja, jonka avulla pääsee aloittamaan Reactin käytön minimaalisin askelin.
