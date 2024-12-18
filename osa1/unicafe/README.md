@@ -1,14 +1,16 @@
 # Osa 1d. Unicafe
 
 Tähän kansioon on kerätty palautukset tehtäviin 
-- 1.6 unicafe, step1
+- 1.6 unicafe, step1: pohjat
+- 1.7 unicafe, step2: laajennettu sovellus perustilastoilla
 
 ## Käytetyt tunnit
   Tunnit | Tehtävä                 |
 | ------- | ---------------------- |
 | 1 | Opiskeltu Mozillan [JavaScript language overview](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Language_overview) |
 | 1 | Luotu hakemisto ja malli käyttäen React + Vite pohjaa |
-| **1** | **Yhteensä** |
+|   | Seuraavaksi materiaaliin tutustuminen ... |
+| **2** | **Yhteensä** |
 
 ## Muistiinpanot
 
