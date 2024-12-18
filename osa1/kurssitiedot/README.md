@@ -21,7 +21,7 @@ Tässä kansiossa on esitetty omat palautukseni tehtäviin
 
 Npm ympäristön asentaminen oli suoraviivaista, mutta aluksi asensin ympäristön kansioon `osa1`. Myöhemmin ymmärsin, että osalle 1a pitää luoda oma alikansio `osa1/kurssitiedot` ja tämän jälkeen menikin hetken aikaa ennenkuin keksin miten jo tehdyt harjoitukset sai kopioitua alikansioon. Vahingossa ehdin tehdä jo paikalliseen projektiin tallennuksen, jossa tuli mukaan koko `node_modules` kansio (7000+ tiedostoa). Jouduin palauttamaan tiedot Github-projektistani ja asentamaan npm:n uudestaan palautettuun kansioon.
 
-Toinen ongelma on VSCoden Source Controlin käytössä. Koska käytän myös Metropolian omaa GitLabia, niin työkoneeni git-asetukset ovat jotenkin sekaisin. En saa synkronoitua tietoja GitHubiin suoraan VSCodesta, vaan joudun työntämään (Push) tiedot käyttäen Git gui:ta. Pieni, mutta ärsyttävä ongelma, jota en ole vielä kyennyt ratkaisemaan. Liittyy ilmeisesti siihen, mitä credential-manageria git käyttää.
+Toinen ongelma on VSCoden Source Controlin käytössä. En saa synkronoitua tietoja GitHubiin suoraan VSCodesta, vaan joudun työntämään (Push) tiedot käyttäen Git gui:ta tai komentoriviä. Pieni, mutta ärsyttävä ongelma, jota en ole vielä kyennyt ratkaisemaan. Liittyy ilmeisesti siihen, mitä credential-manageria git käyttää.
 
 Tätä ongelmaa yritin ratkaista poistamalla Windowsin credential managerista githubiin liittyvät avaimet, resetoida Git-konfiguraatio:
 ```bash
@@ -37,17 +37,21 @@ git config user.email "your.email@example.com"
 ```
 Lisäksi loin henkilökohtaisen pääsyavaimen (Personal Access Token, PAT) Githubissa:
 
-1. Avaa GitHub tilin asetukset (settings).
-2. Avaa Developer settings (löytyy pohjalta )> Personal access tokens.
-3. Klikkaa Generate new token.
-4. Valitse laajuus (scopes, permissions, repo), jolle avain tarvitaan.
-5. Tallenna avain (token) hyvää talteen.
+1. Avaa https://github.com/settings/tokens
+1. Klikkaa Generate new token. käytin Classic-versiota.
+1. Kirjoita lyhyt kuvaus, jotta muistat mitä varten tämä avain on generoitu.
+1. Valitse päättymisaika. Käytin 60 päivää.
+1. Valitse laajuus (Select scopes). Tässä ilmeisesti riittää, että valitsee vain `repo`
+1. Sivun pohjalla on painike `Generate Token`.
+1. Kopioi ja tallenna avain (token) hyvään talteen. Et näe sitä uudestaan.
 
 Tämän jälkeen annoin komentoikkunassa komennon:
 ```
 git push
 ```
-jolloin kysyttiin GitHubin salasanaa. Tässä kohtaa voi valita `token` ja kopioida avain tänne. Tämänkin jälkeen, jos yritän synkronoida projektin VSCoden kautta, saan edelleen virheilmoituksen:
+jolloin kysyttiin GitHubin salasanaa. Tässä kohtaa voi valita `token` ja kopioida generoidun avaimen. 
+
+Tämänkin jälkeen, jos yritän synkronoida projektin VSCoden kautta, saan edelleen virheilmoituksen:
 ```
 > git push origin main:main
 fatal: Unable to persist credentials with the 'wincredman' credential store.
@@ -58,7 +62,7 @@ error: remote-curl: error reading command stream from git
 error: failed to push some refs to 'https://github.com/sakluk/fullstack-mooc.git'
 ```
 
-Eli muutosten työntäminen Github-kansioon pitänee tehdä komentoriviltä.
+Eli muutosten työntäminen Github-kansioon pitänee jatkossakin tehdä komentoriviltä :-(
 
 ## Mallipohja
 
