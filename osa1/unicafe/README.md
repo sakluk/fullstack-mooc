@@ -25,7 +25,7 @@ ja käynnistin ohjelman:
 ```
 npm run dev
 ```
-Tämän jälkeen aloitin tekemään muutoksia tehtävien ohjeiden mukaan.
+Tämän jälkeen tein tehtävätohjeiden mukaan.
 
 ## Mallipohja
 
