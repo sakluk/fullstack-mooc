@@ -25,7 +25,7 @@ ja käynnistin ohjelman:
 ```
 npm run dev
 ```
-Tämän jälkeen tein tehtävätohjeiden mukaan.
+Tämän jälkeen tein tehtävät ohjeiden mukaan.
 
 Tutkittu jälleen miksi push ei onnistu VSCodesta. Virheilmoitus ohjaa sivuille: https://github.com/git-ecosystem/git-credential-manager/blob/main/docs/credstores.md
 mutta näistä ei ole ollut apua.
