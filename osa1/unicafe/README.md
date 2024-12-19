@@ -9,7 +9,7 @@ Tähän kansioon on kerätty palautukset tehtäviin
 | ------- | ---------------------- |
 | 1 | Opiskeltu Mozillan [JavaScript language overview](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Language_overview) |
 | 1 | Luotu hakemisto ja malli käyttäen React + Vite pohjaa |
-|   | Seuraavaksi materiaaliin tutustuminen ... |
+| 1 | Korjattu Gitin credential manager. Nyt käytössä DPAPI  |
 | **2** | **Yhteensä** |
 
 ## Muistiinpanot
