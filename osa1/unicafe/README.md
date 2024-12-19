@@ -27,6 +27,8 @@ npm run dev
 ```
 Tämän jälkeen tein tehtävätohjeiden mukaan.
 
+Tutkittu jälleen miksi push ei onnistu VSCodesta
+
 ## Mallipohja
 
 Ohjeiden mukaan pohjaksi asentuu [React](https://react.dev/) + [Vite](https://vite.dev/) mallipohja, jonka avulla pääsee aloittamaan Reactin käytön minimaalisin askelin.
