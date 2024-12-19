@@ -11,7 +11,8 @@ Tähän kansioon on kerätty palautukset tehtäviin
 | 1 | Luotu hakemisto ja malli käyttäen [React + Vite](https://fullstackopen.com/osa1/reactin_alkeet) pohjaa |
 | 1 | Korjattu Gitin credential manager. Nyt käytössä [DPAPI](https://github.com/git-ecosystem/git-credential-manager/blob/main/docs/credstores.md)  |
 | 1 | Opiskeltu [Komponentin tila- ja tapahtumakäsittelyä](https://fullstackopen.com/osa1/komponentin_tila_ja_tapahtumankasittelyä) |
-| **4** | **Yhteensä** |
+| 1 | Opiskeltu [Monimutkaisempia tiloja ja debuggausta](https://fullstackopen.com/osa1/monimutkaisempi_tila_reactin_debuggaus) |
+| **5** | **Yhteensä** |
 
 ## Muistiinpanot
 
