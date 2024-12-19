@@ -27,7 +27,8 @@ npm run dev
 ```
 Tämän jälkeen tein tehtävätohjeiden mukaan.
 
-Tutkittu jälleen miksi push ei onnistu VSCodesta
+Tutkittu jälleen miksi push ei onnistu VSCodesta. Virheilmoitus ohjaa sivuille: https://github.com/git-ecosystem/git-credential-manager/blob/main/docs/credstores.md
+mutta näistä ei ole ollut apua.
 
 ## Mallipohja
 
