@@ -10,7 +10,8 @@ Tähän kansioon on kerätty palautukset tehtäviin
 | 1 | Opiskeltu Mozillan [JavaScript language overview](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Language_overview) |
 | 1 | Luotu hakemisto ja malli käyttäen [React + Vite](https://fullstackopen.com/osa1/reactin_alkeet) pohjaa |
 | 1 | Korjattu Gitin credential manager. Nyt käytössä [DPAPI](https://github.com/git-ecosystem/git-credential-manager/blob/main/docs/credstores.md)  |
-| **3** | **Yhteensä** |
+| 1 | Opiskeltu [Komponentin tila- ja tapahtumakäsittelyä](https://fullstackopen.com/osa1/komponentin_tila_ja_tapahtumankasittelyä) |
+| **4** | **Yhteensä** |
 
 ## Muistiinpanot
 
