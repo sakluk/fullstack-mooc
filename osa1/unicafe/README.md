@@ -30,6 +30,11 @@ Tämän jälkeen tein tehtävätohjeiden mukaan.
 Tutkittu jälleen miksi push ei onnistu VSCodesta. Virheilmoitus ohjaa sivuille: https://github.com/git-ecosystem/git-credential-manager/blob/main/docs/credstores.md
 mutta näistä ei ole ollut apua.
 
+Lisätty settings.json -tiedostoon:
+```
+"git.credentialHelper": "manager"
+```
+
 ## Mallipohja
 
 Ohjeiden mukaan pohjaksi asentuu [React](https://react.dev/) + [Vite](https://vite.dev/) mallipohja, jonka avulla pääsee aloittamaan Reactin käytön minimaalisin askelin.
