@@ -8,12 +8,13 @@ Tähän kansioon on kerätty palautukset tehtäviin
   Tunnit | Tehtävä                 |
 | ------- | ---------------------- |
 | 1 | Opiskeltu Mozillan [JavaScript language overview](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Language_overview) |
-| 1 | Luotu hakemisto ja malli käyttäen React + Vite pohjaa |
-| 1 | Korjattu Gitin credential manager. Nyt käytössä DPAPI  |
-| **2** | **Yhteensä** |
+| 1 | Luotu hakemisto ja malli käyttäen [React + Vite](https://fullstackopen.com/osa1/reactin_alkeet) pohjaa |
+| 1 | Korjattu Gitin credential manager. Nyt käytössä [DPAPI](https://github.com/git-ecosystem/git-credential-manager/blob/main/docs/credstores.md)  |
+| **3** | **Yhteensä** |
 
 ## Muistiinpanot
 
+### 18.12.2024 Alihakemiston luominen
 Loin samalla tavalla kuin edellisessä tehtäväsarjassa ensimmäiseksi uuden alikansion ja asensin sinne React + Vite mallipohjan:
 ```bash
 cd osa1
@@ -25,21 +26,20 @@ ja käynnistin ohjelman:
 ```
 npm run dev
 ```
-Tämän jälkeen tein tehtävät ohjeiden mukaan.
+Tämän jälkeen tein muokkaukset [tehtävän 1.6](https://fullstackopen.com/osa1/monimutkaisempi_tila_reactin_debuggaus#tehtavat-1-6-1-14) mukaan.
 
+### 19.12.2024 Credential manager opiskelua
 Tutkittu jälleen miksi push ei onnistu VSCodesta. Virheilmoitus ohjaa sivuille: https://github.com/git-ecosystem/git-credential-manager/blob/main/docs/credstores.md
 
-Vaihdoin credential managerin 'dpapi':n antamalla komennon:
+Vaihdoin credential managerin antamalla komennon:
 ```bash
  git config --global credential.credentialStore dpapi
 ```
-ja lisäämällä 
-Lisätty settings.json -tiedostoon rivin:
+ja lisäämällä VSCoden settings.json -tiedostoon rivin:
 ```
 "git.credentialHelper": "dpapi"
 ```
-
-Tämän jälkeen tietojen päivitys (git push, Sync) GitHubiin alkoi myös toimia.
+Tämän jälkeen tietojen päivitys (git push, Sync) GitHubiin alkoi myös toimia VSCoden kautta.
 
 ## Mallipohja
 
