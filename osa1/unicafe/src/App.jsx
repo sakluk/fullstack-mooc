@@ -37,11 +37,19 @@ const App = () => {
     setRight(right + 1)
   }
 
+  // Add a function that resets the counters and the history of clicks.
+  const handleClickReset = () => {  
+    setAll([])
+    setLeft(0)
+    setRight(0)
+  }
+
   return (
     <div>
       <div>
         {left}
         <Button handleClick={handleLeftClick} text='left' />
+        <Button handleClick={handleClickReset} text='reset' />
         <Button handleClick={handleRightClick} text='right' />
         {right}
         <History allClicks={allClicks} />
