@@ -28,12 +28,18 @@ npm run dev
 Tämän jälkeen tein tehtävät ohjeiden mukaan.
 
 Tutkittu jälleen miksi push ei onnistu VSCodesta. Virheilmoitus ohjaa sivuille: https://github.com/git-ecosystem/git-credential-manager/blob/main/docs/credstores.md
-mutta näistä ei ole ollut apua.
 
-Lisätty settings.json -tiedostoon:
+Vaihdoin credential managerin 'dpapi':n antamalla komennon:
+```bash
+ git config --global credential.credentialStore dpapi
 ```
-"git.credentialHelper": "manager"
+ja lisäämällä 
+Lisätty settings.json -tiedostoon rivin:
 ```
+"git.credentialHelper": "dpapi"
+```
+
+Tämän jälkeen tietojen päivitys (git push, Sync) GitHubiin alkoi myös toimia.
 
 ## Mallipohja
 
