@@ -3,6 +3,7 @@
 Tähän kansioon on kerätty palautukset tehtäviin 
 - 1.6. unicafe vaihe1: Implementoitu palautefunktionaalisuus
 - 1.7. unicafe vaihe2: Implementoitu lisätilastot
+- 1.8. unicafe vaihe3: Eriytetty tilastot omaksi komponentiksi
 
 ## Käytetyt tunnit
   Tunnit | Tehtävä                 |
