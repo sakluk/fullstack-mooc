@@ -1,59 +1,39 @@
 import { useState } from 'react'
 
-const History = (props) => {
-  if (props.allClicks.length === 0) {
-    return (
-      <div>
-        the app is used by pressing the buttons
-      </div>
-    )
-  }
-
-  return (
-    <div>
-      button press history: {props.allClicks.join(',')}
-    </div>
-  )
-}
-
 const Button = ({ handleClick, text }) => (
   <button onClick={handleClick}>
     {text}
   </button>
 )
 
+/**
+ *
+ * @component
+ * @example
+ * return (
+ *   <App />
+ * )
+ */
 const App = () => {
-  const [left, setLeft] = useState(0)
-  const [right, setRight] = useState(0)
-  const [allClicks, setAll] = useState([])
+  // Nämä rivit on kopioitu tehtävä 1.6 mukaisesta koodista.
+  const [good, setGood] = useState(0)
+  const [neutral, setNeutral] = useState(0)
+  const [bad, setBad] = useState(0)
 
-  const handleLeftClick = () => {
-    setAll(allClicks.concat('L'))
-    setLeft(left + 1)
-  }
-
-  const handleRightClick = () => {
-    setAll(allClicks.concat('R'))
-    setRight(right + 1)
-  }
-
-  // Add a function that resets the counters and the history of clicks.
-  const handleClickReset = () => {  
-    setAll([])
-    setLeft(0)
-    setRight(0)
-  }
-
+  // Oheinen koodi on Copilotin generoimaa. Pyyhin pois edellisen osa1:ssa
+  // esitellyn esimerkkikoodin ja korvasin sen seuraavalla Copilotin 
+  // rivi kerrallaan ehdottamalla koodilla.
   return (
     <div>
-      <div>
-        {left}
-        <Button handleClick={handleLeftClick} text='left' />
-        <Button handleClick={handleClickReset} text='reset' />
-        <Button handleClick={handleRightClick} text='right' />
-        {right}
-        <History allClicks={allClicks} />
-      </div>
+        <h1>give feedback</h1>
+        <Button handleClick={() => setGood(good + 1)} text='good' />
+        <Button handleClick={() => setNeutral(neutral + 1)} text='neutral' />
+        <Button handleClick={() => setBad(bad + 1)} text='bad' />
+        <h1>statistics</h1>
+        <p>good {good}</p>
+        <p>neutral {neutral}</p>
+        <p>bad {bad}</p>
+        <p>all {good + neutral + bad}</p>
     </div>
   )
 }

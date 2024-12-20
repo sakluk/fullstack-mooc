@@ -12,7 +12,9 @@ Tähän kansioon on kerätty palautukset tehtäviin
 | 1 | Korjattu Gitin credential manager. Nyt käytössä [DPAPI](https://github.com/git-ecosystem/git-credential-manager/blob/main/docs/credstores.md)  |
 | 1 | Opiskeltu [Komponentin tila- ja tapahtumakäsittelyä](https://fullstackopen.com/osa1/komponentin_tila_ja_tapahtumankasittelyä) |
 | 1 | Opiskeltu [Monimutkaisempia tiloja ja debuggausta](https://fullstackopen.com/osa1/monimutkaisempi_tila_reactin_debuggaus) |
-| **5** | **Yhteensä** |
+| 1 | Opiskeltu [reactia](https://react.dev/learn) ja [Thinking in React](https://react.dev/learn) |
+|   | Tehty tehtävä 1.6 käyttäen Copilottia |
+| **6** | **Yhteensä** |
 
 ## Muistiinpanot
 
