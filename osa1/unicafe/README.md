@@ -1,8 +1,7 @@
 # Osa 1d. Unicafe
 
 Tähän kansioon on kerätty palautukset tehtäviin 
-- 1.6 unicafe, step1: pohjat
-- 1.7 unicafe, step2: laajennettu sovellus perustilastoilla
+- 1.6. unicafe vaihe1: Implementoitu palautefunktionaalisuus
 
 ## Käytetyt tunnit
   Tunnit | Tehtävä                 |
