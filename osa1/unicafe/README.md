@@ -14,8 +14,8 @@ Tähän kansioon on kerätty palautukset tehtäviin
 | 1 | Opiskeltu [Komponentin tila- ja tapahtumakäsittelyä](https://fullstackopen.com/osa1/komponentin_tila_ja_tapahtumankasittelyä) |
 | 1 | Opiskeltu [Monimutkaisempia tiloja ja debuggausta](https://fullstackopen.com/osa1/monimutkaisempi_tila_reactin_debuggaus) |
 | 1 | Opiskeltu [reactia](https://react.dev/learn) ja [Thinking in React](https://react.dev/learn) |
-|   | Tehty tehtävä 1.6 käyttäen Copilottia |
-| **6** | **Yhteensä** |
+| 1 | Tehty tehtävä 1.6 - 1.8 käyttäen Copilottia |
+| **7** | **Yhteensä** |
 
 ## Muistiinpanot
 
@@ -45,6 +45,19 @@ ja lisäämällä VSCoden settings.json -tiedostoon rivin:
 "git.credentialHelper": "dpapi"
 ```
 Tämän jälkeen tietojen päivitys (git push, Sync) GitHubiin alkoi myös toimia VSCoden kautta.
+
+### 20.12.2024 Reactin opiskelua ja Copilotin käyttö
+
+ Opiskelin [reactia](https://react.dev/learn) ja [Thinking in Reactia](https://react.dev/learn). Luin eteenpäin kurssimateriaalia. Olin aiemmin käyttänyt VSCoden kanssa Copilotia, mutta huomasin
+ kurssimateriaalissa uusia ominaisuuksia. Koska Copilot-lisäosa ei suostunut päivittymään, päivitin
+ myös VSCoden. Uudempi versio Copilotista olikin todella näppärä. Ilmeisesti tämän kurssin tehtävien
+ palautuksia on jo sen verran paljon Githubissa, että ensimmäisten tehtävien tekeminen sujui
+ tabulaattoria painamalla. Copilot arvaili etukäteen jo seuraavien tehtävien koodirivejä, joten
+ jouduin toppuuttelemaan "perämiestäni". Illan aikana sain tehtyä tehtävät 1.6 - 1.8.
+
+ Olin myös aiemmin päivän aikana itse kopioinut kappaleen [1d - monimutkaisempi tila ja Reactin debuggaus](https://fullstackopen.com/osa1/monimutkaisempi_tila_reactin_debuggaus) - esimerkit ja testannut omassa ympäristössäni, joten ne on tallennettu omiksi versioikseen Github-projektiini. 
+
+ Tähän päättelen tältä päivältä ja katsotaan minkä verran ehdin tehdä näitä tehtäviä huomenna.
 
 ## Mallipohja
 
