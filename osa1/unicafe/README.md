@@ -14,7 +14,7 @@ Tähän kansioon on kerätty palautukset tehtäviin
 | 1 | Opiskeltu [Komponentin tila- ja tapahtumakäsittelyä](https://fullstackopen.com/osa1/komponentin_tila_ja_tapahtumankasittelyä) |
 | 1 | Opiskeltu [Monimutkaisempia tiloja ja debuggausta](https://fullstackopen.com/osa1/monimutkaisempi_tila_reactin_debuggaus) |
 | 1 | Opiskeltu [reactia](https://react.dev/learn) ja [Thinking in React](https://react.dev/learn) |
-| 1 | Tehty tehtävä 1.6 - 1.8 käyttäen Copilottia |
+| 1 | Tehty tehtävät 1.6 - 1.8 käyttäen Copilottia |
 | **7** | **Yhteensä** |
 
 ## Muistiinpanot
