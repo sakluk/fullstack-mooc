@@ -17,7 +17,9 @@ Tähän kansioon on kerätty palautukset tehtäviin
 - Lisätty äänestytoiminto (tehtävä 1.13)
 - Lisätty voittajan näyttäminen
 
-Uusi Copilot on erinomainen työkalu
+Uusi Copilot on erinomainen työkalu. Käytin sitä kääntämään anekdootit suomeksi luomaan 
+suurimman osan tehtävien koodeista. Esim. satunnaisluvun generointi onnistui huomattavasti
+näppärämmin Copilotin avulla kuin Googlaamalla. Vaiheessa 2 annettu vihje [miten täyttää taulukko nollilla JavaScriptillä](https://stackoverflow.com/questions/20222501/how-to-create-a-zero-filled-javascript-array-of-arbitrary-length/22209781) oli hyödyllistä luettavaa.
 
 ## Mallipohja
 
