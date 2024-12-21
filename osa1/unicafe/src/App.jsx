@@ -7,12 +7,18 @@ const Button = ({ handleClick, text }) => (
   </button>
 )
 
+const StatisticsLine = ({ text, value }) => {
+  return (
+    <p>{text} {value}</p>
+  )
+}
+
 // Oheinen koodi on Copilotin generoimaa. Aloitin koodin kirjoittamalla
 // komponentin Statistics ja loput rivit ovat Copilotin ehdottamia.
 const Statistics = ({ good, neutral, bad }) => {
   const all = good + neutral + bad
   const average = 100*(good - bad) / (good + neutral + bad)
-  
+
 // Lisätty ehto, joka tulostaa tekstin "No feedback given", jos palautteita ei ole annettu.
   if (all === 0) {
     return <p>No feedback given</p>
@@ -21,9 +27,9 @@ const Statistics = ({ good, neutral, bad }) => {
   return (
     <div>
       <h1>statistics</h1>
-      <p>good {good}</p>
-      <p>neutral {neutral}</p>
-      <p>bad {bad}</p>
+      <StatisticsLine text="good" value={good} />
+      <StatisticsLine text="neutral" value={neutral} />
+      <StatisticsLine text="bad" value={bad} />
       <p>all {all}</p>
       <p>average {average} %</p>
     </div>
