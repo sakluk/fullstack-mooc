@@ -41,13 +41,21 @@ const App = () => {
     setVotes(copy)
   } 
 
+  // Etsi anekdootin indeksi, jolla on eniten ääniä
+  const mostVotesIndex = votes.indexOf(Math.max(...votes))
+
   return (
     <div>
       <p>{anecdotes_fi[selected]}</p>
       <p>{anecdotes_en[selected]}</p>
       <p>Ääniä: {votes[selected]}</p>
+
       <button onClick={handleClick}>Seuraava anekdootti</button>
       <button onClick={handleVote}>Äänestä</button>
+      
+      <h2>Eniten ääniä saanut anekdootti</h2>
+      <p>{anecdotes_fi[mostVotesIndex]}</p>
+      <p>{anecdotes_en[mostVotesIndex]}</p>
     </div>
   )
 }
