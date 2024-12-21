@@ -12,6 +12,12 @@ const Button = ({ handleClick, text }) => (
 const Statistics = ({ good, neutral, bad }) => {
   const all = good + neutral + bad
   const average = 100*(good - bad) / (good + neutral + bad)
+  
+// Lisätty ehto, joka tulostaa tekstin "No feedback given", jos palautteita ei ole annettu.
+  if (all === 0) {
+    return <p>No feedback given</p>
+  }
+
   return (
     <div>
       <h1>statistics</h1>

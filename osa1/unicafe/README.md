@@ -4,6 +4,7 @@ Tähän kansioon on kerätty palautukset tehtäviin
 - 1.6. unicafe vaihe1: Implementoitu palautefunktionaalisuus
 - 1.7. unicafe vaihe2: Implementoitu lisätilastot
 - 1.8. unicafe vaihe3: Eriytetty tilastot omaksi komponentiksi
+- 1.9. unicafe vaihe4: Tilastot näytetään, jos on palautteita
 
 ## Käytetyt tunnit
   Tunnit | Tehtävä                 |
@@ -15,7 +16,8 @@ Tähän kansioon on kerätty palautukset tehtäviin
 | 1 | Opiskeltu [Monimutkaisempia tiloja ja debuggausta](https://fullstackopen.com/osa1/monimutkaisempi_tila_reactin_debuggaus) |
 | 1 | Opiskeltu [reactia](https://react.dev/learn) ja [Thinking in React](https://react.dev/learn) |
 | 1 | Tehty tehtävät 1.6 - 1.8 käyttäen Copilottia |
-| **7** | **Yhteensä** |
+| 1 | Jatkettu tehtävästä 1.9. eteenpäin |
+| **8** | **Yhteensä** |
 
 ## Muistiinpanot
 
@@ -57,7 +59,9 @@ Tämän jälkeen tietojen päivitys (git push, Sync) GitHubiin alkoi myös toimi
 
  Olin myös aiemmin päivän aikana itse kopioinut kappaleen [1d - monimutkaisempi tila ja Reactin debuggaus](https://fullstackopen.com/osa1/monimutkaisempi_tila_reactin_debuggaus) - esimerkit ja testannut omassa ympäristössäni, joten ne on tallennettu omiksi versioikseen Github-projektiini. 
 
- Tähän päättelen tältä päivältä ja katsotaan minkä verran ehdin tehdä näitä tehtäviä huomenna.
+### 21.12.2024 Jatkettu tehtävien tekemistä
+
+
 
 ## Mallipohja
 
