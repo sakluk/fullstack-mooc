@@ -2,15 +2,18 @@
 
 Tähän kansioon on kerätty palautukset tehtäviin 
 - 1.12 anekdootit vaihe1: satunnainen anekdootti
+- 1.13 anekdootit vaihe2: äänestys
+
 ## Käytetyt tunnit
   Tunnit | Tehtävä                 |
 | ------- | ---------------------- |
-| 1 | Tehty tehtävä 1.12 |
+| 1 | Tehty tehtävät 1.12 - 1.13 |
 | **1** | **Yhteensä** |
 
 ## Muistiinpanot
 - Kopioitu tehtävän 1.12. esimerkkikoodi
 - Muokattu koodia Copilotin avulla
+- Lisätty äänestytoiminto
 
 ## Mallipohja
 
