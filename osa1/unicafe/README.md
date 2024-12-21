@@ -5,6 +5,7 @@ Tähän kansioon on kerätty palautukset tehtäviin
 - 1.7. unicafe vaihe2: Implementoitu lisätilastot
 - 1.8. unicafe vaihe3: Eriytetty tilastot omaksi komponentiksi
 - 1.9. unicafe vaihe4: Tilastot näytetään, jos on palautteita
+- 1.10. unicafe vaihe5: Button ja StatisticLine komponentit
 
 ## Käytetyt tunnit
   Tunnit | Tehtävä                 |
