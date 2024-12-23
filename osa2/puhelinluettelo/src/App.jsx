@@ -19,11 +19,18 @@ const App = () => {
 
   const addPerson = event => {
     event.preventDefault()
-    console.log('Painiketta painettu', event.target)
+    // console.log('Painiketta painettu', event.target)
+    // console.log('newName', newName)
+    const names = persons.map(person => person.name)
+    // console.log(names.includes(newName))
+    if (names.includes(newName)) {
+      alert(`${newName} on jo luettelossa`)
+      return
+    }
     const personObject = {
       name: newName
     }
-    console.log('personObject', personObject)
+    // console.log('personObject', personObject)
     setPersons(persons.concat(personObject))
     setNewName('')
   }
@@ -52,6 +59,5 @@ const App = () => {
     </div>
   )
 }
-
 
 export default App
