@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Numbers from './components/Numbers'
 
 const Person = ({ person }) => {
   return (
@@ -84,14 +85,10 @@ const App = () => {
           <button type="submit">Lisää</button>
         </div>
       </form>
+      
       <h2>Numerot</h2>
-      <div> 
-        <ul>
-          {personsToShow.map(person =>
-            <Person key={person.name} person={person} />
-          )}
-        </ul>
-      </div>
+      <Numbers persons={persons} filter={filter} />
+
     </div>
   )
 }
