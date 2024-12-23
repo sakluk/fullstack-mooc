@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Numbers from './components/Numbers'
 import PersonForm from './components/PersonForm'
+import Filter from './components/Filter'
 
 const Person = ({ person }) => {
   return (
@@ -41,7 +42,6 @@ const App = () => {
 
   const addPerson = event => {
     event.preventDefault()
-    // console.log('Painiketta painettu', event.target)
     // console.log('newName', newName)
     const names = persons.map(person => person.name)
     // console.log(names.includes(newName))
@@ -62,12 +62,9 @@ const App = () => {
   return (
     <div>
       <h2>Puhelinluettelo</h2>
-      <div>
-        <p>rajaa näytettäviä: <input
-          value={filter}
-          onChange={handleFilterChange}
-        /></p>
-      </div>
+      <Filter 
+        filter={filter} 
+        handleFilterChange={handleFilterChange} />  
 
       <h2>Lisää uusi</h2>
       <PersonForm 
