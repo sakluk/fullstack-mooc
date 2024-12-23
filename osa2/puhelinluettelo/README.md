@@ -6,7 +6,8 @@ Tässä kansiossa on esitetty palautukset tehtäviin 2.6. - 2.10.
   Tunnit | Tehtävä                 |
 | ------- | ---------------------- |
 | 1 | Opiskeltu  [lomakkeiden käsittelyä](https://fullstackopen.com/osa2/lomakkeiden_kasittely) |
-| **1** | **Yhteensä** |
+| 1 | Luotu koodi tehtäville 2.6 |
+| **2* | **Yhteensä** |
 
 ## Muistiinpanot
 - Luotu uusi React+Vite mallipohja
@@ -14,7 +15,6 @@ Tässä kansiossa on esitetty palautukset tehtäviin 2.6. - 2.10.
 - Opiskeltu tietojen välittämistä main.jsx:stä App-komponenttiin käyttäen notes-esimerkkiä
 - Poistettu myös `App.css`, koska kaikki tekstit oli keskitetty keskelle näyttöä
 - Jatkettu osan 2.b [lomakkeiden käsittely](https://fullstackopen.com/osa2/lomakkeiden_kasittely) esimerkkien koodaamista
-
 
 ## Mallipohja
 

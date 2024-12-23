@@ -1,77 +1,57 @@
 import { useState } from 'react'
 
-// Leikitään aluksi Note-komponentilla
-import Note from './components/Note'
+const Person = ({ person }) => {
+  return (
+    <li>{person.name}</li>
+  )
+}
 
-
-const App = (props) => {
+const App = () => {
   const [persons, setPersons] = useState([
     { name: 'Arto Hellas' }
   ]) 
   const [newName, setNewName] = useState('')
-
-  // Opettelua varten
-  const [notes, setNotes] = useState(props.notes)
-  const [newNote, setNewNote] = useState('')
-  const [showAll, setShowAll] = useState(true)
-
-  const notesToShow = showAll
-  ? notes
-  : notes.filter(note => note.important)
-  
-
-  const handleNoteChange = (event) => {
+ 
+  const handlePersonChange = (event) => {
     console.log(event.target.value)
-    setNewNote(event.target.value)
+    setNewName(event.target.value)
   }
 
-  const addNote = (event) => {
+  const addPerson = event => {
     event.preventDefault()
-    const noteObject = {
-      content: newNote,
-      important: Math.random() > 0.5,
-      id: String(notes.length + 1),
+    console.log('Painiketta painettu', event.target)
+    const personObject = {
+      name: newName
     }
-  
-    setNotes(notes.concat(noteObject))
-    setNewNote('')
-    console.log('notes', notes)
+    console.log('personObject', personObject)
+    setPersons(persons.concat(personObject))
+    setNewName('')
   }
 
   return (
     <div>
-      {/* Varsinainen tehtävä */}
-      <h2>Phonebook</h2>
-      <form>
+      <h2>Puhelinmuistio</h2>
+      <form onSubmit={addPerson}>
         <div>
-          name: <input />
+          nimi: <input 
+          value={newName}
+          onChange={handlePersonChange}/>
         </div>
         <div>
-          <button type="submit">add</button>
+          <button type="submit">Lisää</button>
         </div>
       </form>
-      <h2>Numbers</h2>
-
-    {/* Opettelua varten */}
-    <h1>Muistiinpanot</h1>
-    <div>
-      <button onClick={() => setShowAll(!showAll)}>
-        näytä {showAll ? 'tärkeät' : 'kaikki' }
-      </button>
-    </div> 
-    <ul>
-      {notesToShow.map(note => <Note key={note.id} note={note} />)}
-    </ul>
-    <form onSubmit={addNote}>
-        <input 
-          value={newNote}
-          onChange={handleNoteChange} 
-        />  
-        <button type="submit">Tallenna</button>
-    </form>
-  </div>
+      <h2>Numerot</h2>
+      <div> 
+        <ul>
+          {persons.map(person =>
+            <Person key={person.name} person={person} />
+          )}
+        </ul>
+      </div>
+    </div>
   )
-
 }
+
 
 export default App
