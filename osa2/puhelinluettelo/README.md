@@ -10,6 +10,9 @@ Tässä kansiossa on esitetty palautukset tehtäviin 2.6. - 2.10.
 ## Muistiinpanot
 - Luotu uusi React+Vite mallipohja
 - Poistettu tarpeettomat tiedostot, jätetty tyylipohjat `App.css` ja  `index.css`
+- Opiskeltu tietojen välittämistä main.jsx:stä App-komponenttiin käyttäen notes-esimerkkiä
+- Poistettu myös `App.css`, koska kaikki tekstit oli keskitetty keskelle näyttöä
+
 
 ## Mallipohja
 
