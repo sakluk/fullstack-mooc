@@ -13,6 +13,11 @@ const App = (props) => {
   // Opettelua varten
   const [notes, setNotes] = useState(props.notes)
   const [newNote, setNewNote] = useState('')
+  const [showAll, setShowAll] = useState(true)
+
+  const notesToShow = showAll
+  ? notes
+  : notes.filter(note => note.important)
   
 
   const handleNoteChange = (event) => {
@@ -48,9 +53,14 @@ const App = (props) => {
       <h2>Numbers</h2>
 
     {/* Opettelua varten */}
-    <h1>Notes</h1>
+    <h1>Muistiinpanot</h1>
+    <div>
+      <button onClick={() => setShowAll(!showAll)}>
+        näytä {showAll ? 'tärkeät' : 'kaikki' }
+      </button>
+    </div> 
     <ul>
-      {notes.map(note => <Note key={note.id} note={note} />)}
+      {notesToShow.map(note => <Note key={note.id} note={note} />)}
     </ul>
     <form onSubmit={addNote}>
         <input 
