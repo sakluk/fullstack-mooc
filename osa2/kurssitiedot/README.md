@@ -11,15 +11,16 @@ Tässä kansiossa on esitetty palautukset tehtäviin
   Tunnit | Tehtävä                 |
 | ------- | ---------------------- |
 | 1 | Tutustuttu [Kokoelmien renderöinti ja modulit](https://fullstackopen.com/osa2/kokoelmien_renderointi_ja_moduulit#kokoelmien-renderoiminen) osioon |
-| 1 | Tehty tehtävät 2.1 - 2.5
-| **2** | **Yhteensä** |
+| 2 | Tehty tehtävät 2.1 - 2.5
+| **3** | **Yhteensä** |
 
 ## Muistiinpanot
 - Luotu uusi React+Vite mallipohja, poistettu tarpeettomat tiedostot
 - Kopioitu [Kokoelmien renderöiminen](https://fullstackopen.com/osa2/kokoelmien_renderointi_ja_moduulit#kokoelmien-renderoiminen) main.jsx ja App.jsx ensimmäiseksi harjoittelupohjaksi
 - Tehty tehtävät 2.1 - 2.5
+- Siivottu courses.jsx, kommentoitu ulos `// console.log()`
 
-Nyt tehtävien tekeminen on jo sujuvampaa. 
+Nyt tehtävien tekeminen on jo sujuvampaa. Copilot on erittäin hyvä apuväline uuden koodin kirjoittamiseen.
 
 ## Mallipohja
 

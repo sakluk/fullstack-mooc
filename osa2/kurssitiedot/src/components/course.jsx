@@ -1,5 +1,5 @@
 const Header = (props) => {
-  console.log(props)
+  // console.log(props)
   return (
     <div>
       <h1>{props.name}</h1>
@@ -8,7 +8,7 @@ const Header = (props) => {
 }
 
 const Part = (props) => {
-  console.log(props)
+  // console.log(props)
   return (
     <div>
       <p>{props.name} {props.exercises}</p>
@@ -16,19 +16,18 @@ const Part = (props) => {
   )
 }
 
-const Content = (props) => {
-  console.log(props)
-  console.log(props.parts[0].name)
+const Content = ({ parts }) => {
+  // console.log('Content', parts)
   return (
     <div>
-      {props.parts.map(part => <Part key={part.id} name={part.name} exercises={part.exercises} />)}
+      {parts.map(part => <Part key={part.id} name={part.name} exercises={part.exercises} />)}
     </div>
   )
 }
 
-const Total = (props) => {
-  console.log(props)
-  const total = props.parts.reduce((sum, part) => sum + part.exercises, 0)
+const Total = ({ parts }) => {
+  // console.log('Total', parts)
+  const total = parts.reduce((sum, part) => sum + part.exercises, 0)
   return (
     <div>
       <p><b>Total of exercises {total}</b></p>
@@ -37,7 +36,7 @@ const Total = (props) => {
 }
 
 const Course = ({ course }) => {
-  console.log('Course', course)
+  // console.log('Course', course)
   return (
     <div>
       <Header name={course.name} />
@@ -48,7 +47,7 @@ const Course = ({ course }) => {
 }
 
 const Courses = ({ courses }) => {
-  console.log('Courses', courses)
+  // console.log('Courses', courses)
   return (
     <div>
       {courses.map(course => <Course key={course.id} course={course} />)}
