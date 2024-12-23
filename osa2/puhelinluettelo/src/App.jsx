@@ -3,16 +3,35 @@ import { useState } from 'react'
 // Leikitään aluksi Note-komponentilla
 import Note from './components/Note'
 
+
 const App = (props) => {
   const [persons, setPersons] = useState([
     { name: 'Arto Hellas' }
   ]) 
   const [newName, setNewName] = useState('')
-  
+
   // Opettelua varten
   const [notes, setNotes] = useState(props.notes)
-  // Tarkista, että notes on olemassa ja että se on taulukko
-  // console.log('notes at App.jsx after useState', notes)
+  const [newNote, setNewNote] = useState('')
+  
+
+  const handleNoteChange = (event) => {
+    console.log(event.target.value)
+    setNewNote(event.target.value)
+  }
+
+  const addNote = (event) => {
+    event.preventDefault()
+    const noteObject = {
+      content: newNote,
+      important: Math.random() > 0.5,
+      id: String(notes.length + 1),
+    }
+  
+    setNotes(notes.concat(noteObject))
+    setNewNote('')
+    console.log('notes', notes)
+  }
 
   return (
     <div>
@@ -33,6 +52,13 @@ const App = (props) => {
     <ul>
       {notes.map(note => <Note key={note.id} note={note} />)}
     </ul>
+    <form onSubmit={addNote}>
+        <input 
+          value={newNote}
+          onChange={handleNoteChange} 
+        />  
+        <button type="submit">Tallenna</button>
+    </form>
   </div>
   )
 
