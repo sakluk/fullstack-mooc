@@ -27,10 +27,10 @@ const Content = (props) => {
 
 const Total = (props) => {
   console.log(props)
-  const total = props.parts[0].exercises + props.parts[1].exercises + props.parts[2].exercises
+  const total = props.parts.reduce((sum, part) => sum + part.exercises, 0)
   return (
     <div>
-      <p>Number of exercises {total}</p>
+      <p><b>Total of exercises {total}</b></p>
     </div>
   )
 }
@@ -40,6 +40,7 @@ const Course = (props) => {
     <div>
       <Header name={props.course.name} />
       <Content parts={props.course.parts} />
+      <Total parts={props.course.parts} />
     </div>
   )
 }
@@ -54,11 +55,11 @@ const App = () => {
         exercises: 10,
         id: 1
       },
-      // {
-      //   name: 'Using props to pass data',
-      //   exercises: 7,
-      //   id: 2
-      // },
+      {
+        name: 'Using props to pass data',
+        exercises: 7,
+        id: 2
+      },
       {
         name: 'State of a component',
         exercises: 14,
