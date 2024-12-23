@@ -5,18 +5,21 @@ Tässä kansiossa on esitetty palautukset tehtäviin
 - 2.2. kurssitiedot vaihe7: yhteenlaskettu tehtävien määrä
 - 2.3. kurssitiedot vaihe8: käytetty reduce metodia yhteenlaskuun
 - 2.4. kurssitiedot vaihe9: mielivaltainen määrä kursseja
+- 2.5. kurssitiedot: erillinen moduuli courses.jsx
 
 ## Käytetyt tunnit
   Tunnit | Tehtävä                 |
 | ------- | ---------------------- |
 | 1 | Tutustuttu [Kokoelmien renderöinti ja modulit](https://fullstackopen.com/osa2/kokoelmien_renderointi_ja_moduulit#kokoelmien-renderoiminen) osioon |
-| 1 | Tehty tehtävät 2.1 - 2.4
+| 1 | Tehty tehtävät 2.1 - 2.5
 | **2** | **Yhteensä** |
 
 ## Muistiinpanot
 - Luotu uusi React+Vite mallipohja, poistettu tarpeettomat tiedostot
 - Kopioitu [Kokoelmien renderöiminen](https://fullstackopen.com/osa2/kokoelmien_renderointi_ja_moduulit#kokoelmien-renderoiminen) main.jsx ja App.jsx ensimmäiseksi harjoittelupohjaksi
-- Tehty tehtävät 2.1 - 2.4
+- Tehty tehtävät 2.1 - 2.5
+
+Nyt tehtävien tekeminen on jo sujuvampaa. 
 
 ## Mallipohja
 
