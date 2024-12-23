@@ -2,19 +2,27 @@ import { useState } from 'react'
 
 const Person = ({ person }) => {
   return (
-    <li>{person.name}</li>
+    <li>{person.name} {person.number}</li>
   )
 }
 
 const App = () => {
   const [persons, setPersons] = useState([
-    { name: 'Arto Hellas' }
+    { name: 'Arto Hellas' ,
+      number: '040-1234567'
+    }
   ]) 
   const [newName, setNewName] = useState('')
+  const [newNumber, setNewNumber] = useState('')
  
   const handlePersonChange = (event) => {
     console.log(event.target.value)
     setNewName(event.target.value)
+  }
+
+  const handleNumberChange = (event) => {
+    console.log(event.target.value)
+    setNewNumber(event.target.value)
   }
 
   const addPerson = event => {
@@ -28,11 +36,13 @@ const App = () => {
       return
     }
     const personObject = {
-      name: newName
+      name: newName,
+      number: newNumber
     }
     // console.log('personObject', personObject)
     setPersons(persons.concat(personObject))
     setNewName('')
+    setNewNumber('')
   }
 
   return (
@@ -40,9 +50,16 @@ const App = () => {
       <h2>Puhelinmuistio</h2>
       <form onSubmit={addPerson}>
         <div>
-          nimi: <input 
-          value={newName}
-          onChange={handlePersonChange}/>
+          <p>
+            nimi: <input 
+              value={newName}
+              onChange={handlePersonChange}/>
+          </p>
+          <p>
+            numero: <input 
+            value={newNumber}
+            onChange={handleNumberChange}/>
+          </p> 
         </div>
         <div>
           <button type="submit">Lisää</button>
