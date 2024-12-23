@@ -6,7 +6,7 @@ Tässä kansiossa on esitetty palautukset tehtäviin 2.6. - 2.10.
   Tunnit | Tehtävä                 |
 | ------- | ---------------------- |
 | 1 | Opiskeltu  [lomakkeiden käsittelyä](https://fullstackopen.com/osa2/lomakkeiden_kasittely) |
-| 2 | Luotu koodi tehtäville 2.6 - 2.8 |
+| 2 | Luotu koodi tehtäville 2.6 - 2.9 |
 | **3** | **Yhteensä** |
 
 ## Muistiinpanot

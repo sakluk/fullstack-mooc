@@ -20,7 +20,7 @@ const StatisticsLine = ({ text, value }) => {
 // komponentin Statistics ja loput rivit ovat Copilotin ehdottamia.
 const Statistics = ({ good, neutral, bad }) => {
   const all = good + neutral + bad
-  const average = 100 * (good - bad) / all
+  const average = 100*(good - bad) / (good + neutral + bad)
 
 // Lisätty ehto, joka tulostaa tekstin "No feedback given", jos palautteita ei ole annettu.
   if (all === 0) {
