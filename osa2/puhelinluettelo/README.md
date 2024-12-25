@@ -9,8 +9,8 @@ Tässä kansiossa on esitetty palautukset tehtäviin 2.6. - 2.11.
 | 2 | Luotu koodi tehtäville 2.6 - 2.10 |
 | 1 | Opiskeltu [palvelimella olevan datan hakemista](https://fullstackopen.com/osa2/palvelimella_olevan_datan_hakeminen) |
 | 1 | Tehty tehtävä 2.11. |
-| 1 | Opiskelut 
-| **4** | **Yhteensä** |
+| 1 | Opiskeltu [palvelimella olevan datan muokkaamista](https://fullstackopen.com/osa2/palvelimella_olevan_datan_muokkaaminen) 
+| **6** | **Yhteensä** |
 
 ## Muistiinpanot
 - Luotu uusi React+Vite mallipohja
