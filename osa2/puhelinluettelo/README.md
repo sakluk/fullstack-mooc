@@ -1,13 +1,16 @@
 # Osa 2. Puhelinluettelo
 
-Tässä kansiossa on esitetty palautukset tehtäviin 2.6. - 2.10.
+Tässä kansiossa on esitetty palautukset tehtäviin 2.6. - 2.11.
 
 ## Käytetyt tunnit
   Tunnit | Tehtävä                 |
 | ------- | ---------------------- |
 | 1 | Opiskeltu  [lomakkeiden käsittelyä](https://fullstackopen.com/osa2/lomakkeiden_kasittely) |
 | 2 | Luotu koodi tehtäville 2.6 - 2.10 |
-| **3** | **Yhteensä** |
+| 1 | Opiskeltu [palvelimella olevan datan hakemista](https://fullstackopen.com/osa2/palvelimella_olevan_datan_hakeminen) |
+| 1 | Tehty tehtävä 2.11. |
+| 1 | Opiskelut 
+| **4** | **Yhteensä** |
 
 ## Muistiinpanot
 - Luotu uusi React+Vite mallipohja
@@ -15,8 +18,12 @@ Tässä kansiossa on esitetty palautukset tehtäviin 2.6. - 2.10.
 - Opiskeltu tietojen välittämistä main.jsx:stä App-komponenttiin käyttäen notes-esimerkkiä
 - Poistettu myös `App.css`, koska kaikki tekstit oli keskitetty keskelle näyttöä
 - Jatkettu osan 2.b [lomakkeiden käsittely](https://fullstackopen.com/osa2/lomakkeiden_kasittely) esimerkkien koodaamista
+- Jatkettu osan 2.c [palvelimella olevan datan hakemisen](https://fullstackopen.com/osa2/palvelimella_olevan_datan_hakeminen) opiskelulla
+- Jatkettu osan 2.d.[palvelimella olevan datan muokkaamisen](https://fullstackopen.com/osa2/palvelimella_olevan_datan_muokkaaminen) opiskelua
 
-Jälleen kerran Copilotista oli korvaamaton apu. Esim. kun refaktoroin koodia (tehtävä 2.10), avasin ja tallensin uuden komponenttitiedoston, `App.jsx` tiedostoon oli ilmestynyt automaattisesti `import` lausekkeet. Samoin Copilot arvasi pelkästä komponentin nimen alusta, millaista koodia pitää kirjoittaa. Itselleni jäi tehtäväksi koodin oikoluku ja testata, että koodi edelleen toimii, kuten on tarkoitus.
+Nyt ymmärrän paremmin meidän opiskelijoita, kun he koodaavat ensimmäistä kertaa omaa verkkosovellustaan ja tuskailevat koodin monimutkaisuuden kanssa. Lukiessani osiota [palvelimella olevan datan muokkaamista](https://fullstackopen.com/osa2/palvelimella_olevan_datan_muokkaaminen) olin aiemmin jo jotenkin päässyt sinuiksi React-objektien, tapahtumakäsittelijöiden ja tilojen kanssa, mutta nyt kun yhdistetään asynkroninen tiedonhaku ja -kirjoitus tietokantaan, on haastavaa koodatesta pitää mielessä kaikkivat liikkuvat osat. Sellainen tunne, että opetellaan jonglööraamaan 6 erilaisella esineellä yhtäaikaa. Oppimiskäyrä on todella tiukka, varsinkin kun näyttää siltä, että kaikki sovelluslogiikka (ainakin tässä vaiheessa) kirjoitetaan muutamaan komponenttiin ja `App.jsx` tiedostoon ja uusia termejä ja asioita tulee tiiviiseen tahtiin. Viimeksi olen koodannut sovelluksia ehkä melkein 20 vuotta sitten käyttäen Visual Basicia tai Matlabilla. Näissä työkaluissa (muistelen) sovelluksen käyttöliittymä ja tapahtumakäsittelijät oli eriytetty eri tiedostoihin ja käytettiin eri työkaluja näiden työstämiseen. Ehkäpä tähänkin on olemassa fiksumpia tapoja JavaScript-pohjaisten verkkosovellusten kehittämisessä. Samoin, kun tähän mennessä on opetellut debuggaamaan ainoastaan käyttämällä `console.log` -komentoja ja tarkkailemalla jatkuvasti muutoksia sovelluksen kehitysversiossa, koodin toteuttaminen ja testaus tuntuu ainakin näin uutena verkkosovelluksen koodaajana hitaalta.
+
+Jälleen kerran Copilotista on ollut korvaamaton apu. Esim. kun refaktoroin koodia (tehtävä 2.10), avasin ja tallensin uuden komponenttitiedoston, `App.jsx` tiedostoon oli ilmestynyt automaattisesti `import` lausekkeet. Samoin Copilot arvasi pelkästä komponentin nimen alusta, millaista koodia pitää kirjoittaa. Itselleni jäi tehtäväksi koodin oikoluku ja testata, että koodi edelleen toimii, kuten on tarkoitus.
 
 ## Mallipohja
 
