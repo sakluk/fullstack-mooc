@@ -15,7 +15,11 @@ function App() {
           const filteredCountries = response.data.filter(country =>
             country.name.common.toLowerCase().includes(query.toLowerCase())
           )
-          setCountries(filteredCountries)
+          if (filteredCountries.length > 10) {
+            setCountries([{ name: { common: 'too many matches, specify another filter' }, cca3: '0' }])
+          } else {
+            setCountries(filteredCountries)
+          }
         })
     } else {
       setCountries([])
@@ -31,7 +35,6 @@ function App() {
         value={query}
         onChange={(e) => setQuery(e.target.value)}
       />
-      <button onClick={() => setQuery(query)}>Search</button>
       <ul>
         {countries.map(country => (
           <li key={country.cca3}>{country.name.common}</li>
