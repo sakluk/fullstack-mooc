@@ -10,8 +10,8 @@ Tässä kansiossa on esitetty palautukset tehtäviin 2.6. - 2.12.
 | 1 | Opiskeltu [palvelimella olevan datan hakemista](https://fullstackopen.com/osa2/palvelimella_olevan_datan_hakeminen) |
 | 1 | Tehty tehtävä 2.11. |
 | 1 | Opiskeltu [palvelimella olevan datan muokkaamista](https://fullstackopen.com/osa2/palvelimella_olevan_datan_muokkaaminen) |
-| 1 | Tehty tehtävät 2.12. - 2.14.  |
-| **7** | **Yhteensä** |
+| 2 | Tehty tehtävät 2.12. - 2.15.  |
+| **8** | **Yhteensä** |
 
 ## Muistiinpanot
 - Luotu uusi React+Vite mallipohja
@@ -21,14 +21,14 @@ Tässä kansiossa on esitetty palautukset tehtäviin 2.6. - 2.12.
 - Jatkettu osan 2.b [lomakkeiden käsittely](https://fullstackopen.com/osa2/lomakkeiden_kasittely) esimerkkien koodaamista
 - Jatkettu osan 2.c [palvelimella olevan datan hakemisen](https://fullstackopen.com/osa2/palvelimella_olevan_datan_hakeminen) opiskelulla
 - Jatkettu osan 2.d.[palvelimella olevan datan muokkaamisen](https://fullstackopen.com/osa2/palvelimella_olevan_datan_muokkaaminen) opiskelua
-- Tehty tehtävät 2.12 - 2.25. Lisätty [.\src\services\persons.js](.\src\services\persons.js)
+- Tehty tehtävät 2.12 - 2.15. Lisätty [.\src\services\persons.js](.\src\services\persons.js)
 
 
 Nyt ymmärrän paremmin meidän opiskelijoita, kun he [koodaavat ensimmäistä kertaa omaa verkkosovellustaan](https://opinto-opas.metropolia.fi/88094/fi/67/70361/3459/2550/62749) ja tuskailevat koodin monimutkaisuuden kanssa. Olin jo aiemmin jotenkin päässyt sinuiksi React-objektien, tapahtumakäsittelijöiden ja tilojen kanssa, mutta lukiessani osiota [palvelimella olevan datan muokkaamista](https://fullstackopen.com/osa2/palvelimella_olevan_datan_muokkaaminen) nyt kun yhdistetään asynkroninen tiedonhaku ja -kirjoitus tietokantaan, on haastavaa pitää mielessä kaikkivat liikkuvat osat. Sellainen tunne, että opetellaan jonglööraamaan 6 erilaisella esineellä yhtäaikaa. Oppimiskäyrä on todella tiukka, varsinkin kun näyttää siltä, että kaikki sovelluslogiikka (ainakin tässä vaiheessa) kirjoitetaan muutamaan komponenttiin ja `App.jsx` tiedostoon ja uusia termejä ja asioita tulee tiiviiseen tahtiin. 
 
 Viimeksi olen koodannut sovelluksia ehkä melkein 20 vuotta sitten käyttäen Visual Basicia tai Matlabia. Näissä työkaluissa (muistelen) sovelluksen käyttöliittymä ja tapahtumakäsittelijät oli eriytetty eri tiedostoihin ja käytettiin eri työkaluja näiden työstämiseen. Ehkäpä tähänkin on olemassa fiksumpia tapoja JavaScript-pohjaisten verkkosovellusten kehittämisessä. Samoin, kun tähän mennessä on opetellut debuggaamaan ainoastaan käyttämällä `console.log` -komentoja ja tarkkailemalla jatkuvasti muutoksia sovelluksen kehitysversiossa, koodin toteuttaminen ja testaus tuntuu ainakin näin uutena verkkosovelluksen koodaajana hitaalta.
 
-Jälleen kerran Copilotista on ollut korvaamaton apu. Esim. kun refaktoroin koodia (tehtävä 2.10), avasin ja tallensin uuden komponenttitiedoston, `App.jsx` tiedostoon oli ilmestynyt automaattisesti `import` lausekkeet. Samoin Copilot arvasi pelkästä komponentin nimen alusta, millaista koodia pitää kirjoittaa. Itselleni jäi tehtäväksi koodin oikoluku ja testata, että koodi edelleen toimii, kuten on tarkoitus.
+Jälleen kerran Copilotista on ollut korvaamaton apu. Esim. kun refaktoroin koodia (tehtävä 2.10), avasin ja tallensin uuden komponenttitiedoston, `App.jsx` tiedostoon oli ilmestynyt automaattisesti `import` lausekkeet. Samoin Copilot arvasi pelkästä komponentin tai funktion nimen alusta, millaista koodia pitää kirjoittaa. Itselleni jäi tehtäväksi koodin oikoluku ja testata, että koodi edelleen toimii, kuten on tarkoitus.
 
 ## Mallipohja
 

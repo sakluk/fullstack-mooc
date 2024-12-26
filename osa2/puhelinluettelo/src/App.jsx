@@ -13,11 +13,6 @@ const Person = ({ person }) => {
 const App = () => {
 
   const [persons, setPersons] = useState([])
-  //   { name: 'Arto Hellas', number: '040-123456' },
-  //   { name: 'Ada Lovelace', number: '39-44-5323523' },
-  //   { name: 'Dan Abramov', number: '12-43-234345' },
-  //   { name: 'Mary Poppendieck', number: '39-23-6423122' }
-  // ])
   const [newName, setNewName] = useState('')
   const [newNumber, setNewNumber] = useState('')
   const [filter, setFilter] = useState('')
@@ -61,15 +56,36 @@ const App = () => {
     
     const names = persons.map(person => person.name)
     if (names.includes(newName)) {
-      alert(`${newName} on jo luettelossa`)
+
+      // Copilotin generoima koodi, joka kysyy käyttäjältä, haluaako hän päivittää numeron.
+      if (window.confirm(`${newName} on jo luettelossa. Haluatko päivittää numeron?`)) {
+        // Päivitä numero
+        const person = persons.find(p => p.name === newName)
+        const changedPerson = { ...person, number: newNumber }
+
+        phoneService
+          .update(person.id, changedPerson)
+          .then(returnedPerson => {
+        setPersons(persons.map(p => p.id !== person.id ? p : returnedPerson))
+          })
+          .catch(error => {
+        console.log(error.response.data)
+          })
+        setNewName('')
+        setNewNumber('')
+      }
+      // Älä tee mitään, jos nimeä ei päivitetä.
+      // Voisi tyhjentää kentät, mutta se ei ole tehtävänannon mukaista.
       return
     }
 
+    // Luo uusi henkilö.
     const personObject = {
       name: newName,
       number: newNumber
     }
 
+    // Lisää uusi henkilö palvelimelle.
     phoneService
       .create(personObject)
       .then(returnedPerson => {
@@ -79,6 +95,8 @@ const App = () => {
         console.log(error.response.data)
       })
 
+    // Tyhjennä kentät.
+    console.log('Clearing fields')
     setNewName('')
     setNewNumber('')
   }
