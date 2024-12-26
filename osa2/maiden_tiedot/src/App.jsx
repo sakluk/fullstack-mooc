@@ -16,9 +16,23 @@ function App() {
             country.name.common.toLowerCase().includes(query.toLowerCase())
           )
           if (filteredCountries.length > 10) {
-            setCountries([{ name: { common: 'too many matches, specify another filter' }, cca3: '0' }])
+            setCountries(<p>Too many matches, specify another filter</p>)
+          } else if (filteredCountries.length > 1) {
+            setCountries(filteredCountries.map(country => (
+              <li key={country.cca3}>{country.name.common}</li>
+            )))
           } else {
-            setCountries(filteredCountries)
+            const country = filteredCountries[0]
+            setCountries(
+              <div>
+              <h2>{country.name.common}</h2>
+              <p>Capital: {country.capital}</p>
+              <p>Area: {country.area} km²</p>
+              <h3>Languages:</h3>
+              <p>{Object.values(country.languages).join(', ')}</p>
+              <img src={country.flags.png} alt={`Flag of ${country.name.common}`} width="100" />
+              </div>
+            )
           }
         })
     } else {
@@ -35,11 +49,7 @@ function App() {
         value={query}
         onChange={(e) => setQuery(e.target.value)}
       />
-      <ul>
-        {countries.map(country => (
-          <li key={country.cca3}>{country.name.common}</li>
-        ))}
-      </ul>
+      {countries}
     </div>
   )
 }
