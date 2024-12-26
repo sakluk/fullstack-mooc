@@ -1,13 +1,25 @@
-const Notification = ({ message }) => {
-    if (message === null) {
-      return null
-    }
-  
+const Notification = ({ msg }) => {
+  console.log('Notification:', msg)
+  if (!msg) {
+    return null
+  }
+
+  if (msg.isError) {
+    console.log('Notification: showing error')
     return (
-      <div className="message">
-        {message}
+      <div className="error">
+        {msg.message}
       </div>
     )
   }
 
-  export default Notification
+  console.log('Notification: showing message')
+  return (
+    <div className="message">
+      {msg.message}
+    </div>
+  )
+
+}
+
+export default Notification

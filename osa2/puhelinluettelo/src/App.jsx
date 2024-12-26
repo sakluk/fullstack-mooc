@@ -17,21 +17,20 @@ const App = () => {
   const [newName, setNewName] = useState('')
   const [newNumber, setNewNumber] = useState('')
   const [filter, setFilter] = useState('')
-  const [changeMessage, setChangeMessage] = useState(null)
-
+  const [newMessage, setNewMessage] = useState(null)
 
   const handlePersonChange = (event) => {
-    console.log(event.target.value)
+    // console.log(event.target.value)
     setNewName(event.target.value)
   }
 
   const handleNumberChange = (event) => {
-    console.log(event.target.value)
+    // console.log(event.target.value)
     setNewNumber(event.target.value)
   }
 
   const handleFilterChange = (event) => {
-    console.log(event.target.value)
+    // console.log(event.target.value)
     setFilter(event.target.value)
   }
 
@@ -45,8 +44,13 @@ const App = () => {
         .then(() => {
           setPersons(persons.filter(p => p.id !== id))
         })
-      setChangeMessage(`Henkilö ${person.name} poistettu luettelosta.`)
-      setTimeout(() => { setChangeMessage(null) }, 5000)
+      // console.log('Person removed')
+      const msg = {
+        message: `Henkilö ${person.name} poistettu luettelosta.`,
+        isError: false } 
+      setNewMessage(msg)
+      // console.log('Message set', msg)
+      setTimeout(() => { setNewMessage(null) }, 5000)
     }
   }
   
@@ -70,15 +74,24 @@ const App = () => {
         phoneService
           .update(person.id, changedPerson)
           .then(returnedPerson => {
-        setPersons(persons.map(p => p.id !== person.id ? p : returnedPerson))
+            setPersons(persons.map(p => p.id !== person.id ? p : returnedPerson))
           })
           .catch(error => {
-        console.log(error.response.data)
+            console.log(error.response.data)
+            const msg = {
+              message: `Henkilö ${newName} on jo poistettu.`,
+              isError: true }
+            setNewMessage(msg)
+            setTimeout(() => { setNewMessage(null) }, 5000)
           })
+
+        const msg = {
+          message: `Henkilön ${newName} numero päivitetty.`,
+          isError: false }
+        setNewMessage(msg)
+        setTimeout(() => { setNewMessage(null) }, 5000)
         setNewName('')
         setNewNumber('')
-        setChangeMessage(`Henkilön ${newName} numero päivitetty.`)
-        setTimeout(() => { setChangeMessage(null) }, 5000)
       }
       // Älä tee mitään, jos nimeä ei päivitetä.
       // Voisi tyhjentää kentät, mutta se ei ole tehtävänannon mukaista.
@@ -102,11 +115,16 @@ const App = () => {
       })
 
     // Tyhjennä kentät.
-    console.log('Clearing fields')
+    // console.log('Clearing fields')
     setNewName('')
     setNewNumber('')
-    setChangeMessage(`Henkilö ${newName} lisätty luetteloon.`)
-    setTimeout(() => { setChangeMessage(null) }, 5000)
+    // console.log('Fields cleared')
+    let msg = {
+      message: `Henkilö ${newName} lisätty luetteloon.`,
+      isError: false }
+    setNewMessage(msg)
+    setTimeout(() => { setNewMessage(null) }, 5000)
+    // console.log('Message cleared')
   }
 
   useEffect(() => {
@@ -114,14 +132,17 @@ const App = () => {
       .getAll()
       .then(initialPersons => {
         setPersons(initialPersons)
+        console.log('Persons set')
       })
   }, [])
-  console.log('render', persons.length, 'persons')
-  
+  // console.log('render', persons.length, 'persons')
+  console.log('render', newMessage)
+  console.log('null', null)
+
   return (
     <div>
       <h2>Puhelinluettelo</h2>
-      <Notification message={changeMessage} />
+      <Notification msg={newMessage} />
       <Filter 
         filter={filter} 
         handleFilterChange={handleFilterChange} />  
