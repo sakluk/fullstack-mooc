@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import Numbers from './components/Numbers'
 import PersonForm from './components/PersonForm'
 import Filter from './components/Filter'
+import Notification from './components/Notification'
 import phoneService from './services/persons'
 
 const Person = ({ person }) => {
@@ -16,6 +17,7 @@ const App = () => {
   const [newName, setNewName] = useState('')
   const [newNumber, setNewNumber] = useState('')
   const [filter, setFilter] = useState('')
+  const [changeMessage, setChangeMessage] = useState(null)
 
 
   const handlePersonChange = (event) => {
@@ -43,6 +45,8 @@ const App = () => {
         .then(() => {
           setPersons(persons.filter(p => p.id !== id))
         })
+      setChangeMessage(`Henkilö ${person.name} poistettu luettelosta.`)
+      setTimeout(() => { setChangeMessage(null) }, 5000)
     }
   }
   
@@ -73,6 +77,8 @@ const App = () => {
           })
         setNewName('')
         setNewNumber('')
+        setChangeMessage(`Henkilön ${newName} numero päivitetty.`)
+        setTimeout(() => { setChangeMessage(null) }, 5000)
       }
       // Älä tee mitään, jos nimeä ei päivitetä.
       // Voisi tyhjentää kentät, mutta se ei ole tehtävänannon mukaista.
@@ -99,6 +105,8 @@ const App = () => {
     console.log('Clearing fields')
     setNewName('')
     setNewNumber('')
+    setChangeMessage(`Henkilö ${newName} lisätty luetteloon.`)
+    setTimeout(() => { setChangeMessage(null) }, 5000)
   }
 
   useEffect(() => {
@@ -113,6 +121,7 @@ const App = () => {
   return (
     <div>
       <h2>Puhelinluettelo</h2>
+      <Notification message={changeMessage} />
       <Filter 
         filter={filter} 
         handleFilterChange={handleFilterChange} />  
