@@ -10,6 +10,7 @@ Tässä kansiossa on esitetty palautukset tehtäviin 2.18 - 2.20.
 
 ## Muistiinpanot
 - Luotu uusi React+Vite mallipohja, poistettu tarpeettomat tiedostot
+- Koodattu Copilottia käyttäen maiden suodattaminen
 
 ## Mallipohja
 
