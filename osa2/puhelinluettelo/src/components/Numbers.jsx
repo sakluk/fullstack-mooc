@@ -1,4 +1,6 @@
-const Numbers = ({ persons, filter }) => {
+import phoneService from '../services/persons'
+
+const Numbers = ({ persons, filter, callback }) => {
   
   const personsToShow = persons.filter(person => 
     person.name.toLowerCase().includes(filter.toLowerCase())
@@ -8,7 +10,13 @@ const Numbers = ({ persons, filter }) => {
     <div>
       <ul>
         {personsToShow.map(person => 
-          <li key={person.name}>{person.name} {person.number}</li>
+          <li key={person.name}>
+            {person.name}  {person.number}  
+            <button onClick={() => {
+              console.log('onClick', person.id)  
+              callback(person.id)
+            }}>Poista</button>
+          </li>
         )}
       </ul>
     </div>
