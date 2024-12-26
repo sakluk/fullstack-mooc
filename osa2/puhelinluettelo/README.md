@@ -1,6 +1,6 @@
 # Osa 2. Puhelinluettelo
 
-Tässä kansiossa on esitetty palautukset tehtäviin 2.6. - 2.12.
+Tässä kansiossa on esitetty palautukset tehtäviin 2.6. - 2.17.
 
 ## Käytetyt tunnit
   Tunnit | Tehtävä                 |
@@ -10,8 +10,8 @@ Tässä kansiossa on esitetty palautukset tehtäviin 2.6. - 2.12.
 | 1 | Opiskeltu [palvelimella olevan datan hakemista](https://fullstackopen.com/osa2/palvelimella_olevan_datan_hakeminen) |
 | 1 | Tehty tehtävä 2.11. |
 | 1 | Opiskeltu [palvelimella olevan datan muokkaamista](https://fullstackopen.com/osa2/palvelimella_olevan_datan_muokkaaminen) |
-| 2 | Tehty tehtävät 2.12. - 2.17.  |
-| **8** | **Yhteensä** |
+| 3 | Tehty tehtävät 2.12. - 2.17.  |
+| **9** | **Yhteensä** |
 
 ## Muistiinpanot
 - Luotu uusi React+Vite mallipohja
