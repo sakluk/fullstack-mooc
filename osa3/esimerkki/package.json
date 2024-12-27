@@ -1,0 +1,19 @@
+{
+  "name": "esimerkki",
+  "version": "1.0.0",
+  "description": "Fullstack osa3 esimerkki",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "author": "Sakari Lukkarinen",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
