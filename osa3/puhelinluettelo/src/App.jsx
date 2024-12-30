@@ -94,7 +94,6 @@ const App = () => {
         setNewNumber('')
       }
       // Älä tee mitään, jos nimeä ei päivitetä.
-      // Voisi tyhjentää kentät, mutta se ei ole tehtävänannon mukaista.
       return
     }
 
@@ -115,16 +114,15 @@ const App = () => {
       })
 
     // Tyhjennä kentät.
-    // console.log('Clearing fields')
     setNewName('')
     setNewNumber('')
-    // console.log('Fields cleared')
+
+    // Näytä viesti
     let msg = {
       message: `Henkilö ${newName} lisätty luetteloon.`,
       isError: false }
     setNewMessage(msg)
     setTimeout(() => { setNewMessage(null) }, 5000)
-    // console.log('Message cleared')
   }
 
   useEffect(() => {
@@ -132,12 +130,11 @@ const App = () => {
       .getAll()
       .then(initialPersons => {
         setPersons(initialPersons)
-        console.log('Persons set')
+        // console.log('Persons set')
       })
   }, [])
   // console.log('render', persons.length, 'persons')
-  console.log('render', newMessage)
-  console.log('null', null)
+  // console.log('render', newMessage)
 
   return (
     <div>

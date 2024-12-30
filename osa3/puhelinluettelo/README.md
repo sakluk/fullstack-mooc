@@ -25,6 +25,7 @@ Tässä kansiossa on esitetty palautukset tehtäviin 2.6. - 2.17 sekä tarvittav
 - Tehty tehtävät 2.12 - 2.17. 
 - Lisätty [.\src\services\persons.js](.\src\services\persons.js)
 - Lisätty [.\src\components\Notification.jsx](.\srv\components\Notification.jsx)
+- Muutettu ja korjattu toimimaan palvelimen ja mongoDB:n kanssa
 
 Nyt ymmärrän paremmin meidän opiskelijoita, kun he [koodaavat ensimmäistä kertaa omaa verkkosovellustaan](https://opinto-opas.metropolia.fi/88094/fi/67/70361/3459/2550/62749) ja tuskailevat koodin monimutkaisuuden kanssa. Olin jo aiemmin jotenkin päässyt sinuiksi React-objektien, tapahtumakäsittelijöiden ja tilojen kanssa, mutta lukiessani osiota [palvelimella olevan datan muokkaamista](https://fullstackopen.com/osa2/palvelimella_olevan_datan_muokkaaminen) nyt kun yhdistetään asynkroninen tiedonhaku ja -kirjoitus tietokantaan, on haastavaa pitää mielessä kaikkivat liikkuvat osat. Sellainen tunne, että opetellaan jonglööraamaan 6 erilaisella esineellä yhtäaikaa. Oppimiskäyrä on todella tiukka, varsinkin kun näyttää siltä, että kaikki sovelluslogiikka (ainakin tässä vaiheessa) kirjoitetaan muutamaan komponenttiin ja `App.jsx` tiedostoon ja uusia termejä ja asioita tulee tiiviiseen tahtiin. 
 

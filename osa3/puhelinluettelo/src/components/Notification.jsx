@@ -1,5 +1,5 @@
 const Notification = ({ msg }) => {
-  console.log('Notification:', msg)
+  // console.log('Notification:', msg)
   if (!msg) {
     return null
   }
@@ -13,7 +13,7 @@ const Notification = ({ msg }) => {
     )
   }
 
-  console.log('Notification: showing message')
+  // console.log('Notification: showing message')
   return (
     <div className="message">
       {msg.message}
