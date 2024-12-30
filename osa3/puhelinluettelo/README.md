@@ -1,6 +1,7 @@
 # Osa 2. Puhelinluettelo
 
-Tässä kansiossa on esitetty palautukset tehtäviin 2.6. - 2.17.
+Tässä kansiossa on esitetty palautukset tehtäviin 2.6. - 2.17 sekä tarvittavat muutokset tehtävään 3.14.
+
 
 ## Käytetyt tunnit
   Tunnit | Tehtävä                 |
