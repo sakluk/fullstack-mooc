@@ -5,7 +5,7 @@ const Notification = ({ msg }) => {
   }
 
   if (msg.isError) {
-    console.log('Notification: showing error')
+    // console.log('Notification: showing error')
     return (
       <div className="error">
         {msg.message}

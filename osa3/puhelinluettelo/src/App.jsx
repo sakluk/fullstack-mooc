@@ -80,7 +80,7 @@ const App = () => {
           .catch(error => {
             console.log(error.response.data)
             const msg = {
-              message: `Henkilö ${newName} on jo poistettu.`,
+              message: `Henkilön ${newName} puhelinnumeron vaihtaminen ei onnistunut: ${error.response.data.error}`,
               isError: true }
             setNewMessage(msg)
             setTimeout(() => { setNewMessage(null) }, 5000)
@@ -112,6 +112,13 @@ const App = () => {
       })
       .catch(error => {
         console.log(error.response.data)
+        const msg = {
+          message: `Henkilön ${newName} lisääminen ei onnistunut. virhe: ${error.response.data.error}`,
+          isError: true }
+        setNewMessage(msg)
+        setTimeout(() => { setNewMessage(null) }, 5000)
+        setNewName('')
+        setNewNumber('')
       })
 
     // Tyhjennä kentät.
