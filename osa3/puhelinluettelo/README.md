@@ -10,6 +10,7 @@ Käytetyt tunnit on kirjattu palvelinpuolen kirjanpitoon.
 - Muutettu ja korjattu toimimaan palvelimen ja mongoDB:n kanssa
 - Asennettu ESLint `npm install eslint`
 - Alustettu ESLint `npx eslint --init`
+- Lisätty lint skripti package.json tiedostoon
 
 ## Mallipohja
 
