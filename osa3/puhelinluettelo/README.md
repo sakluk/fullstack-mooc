@@ -8,6 +8,7 @@ Käytetyt tunnit on kirjattu palvelinpuolen kirjanpitoon.
 
 ## Muistiinpanot
 - Muutettu ja korjattu toimimaan palvelimen ja mongoDB:n kanssa
+- Asennettu ESLint `npm install eslint`
 
 ## Mallipohja
 
