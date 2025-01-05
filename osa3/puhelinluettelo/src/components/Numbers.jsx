@@ -1,4 +1,5 @@
-import phoneService from '../services/persons'
+import PropTypes from 'prop-types'
+// import phoneService from '../services/persons'
 
 const Numbers = ({ persons, filter, callback }) => {
   
@@ -21,6 +22,12 @@ const Numbers = ({ persons, filter, callback }) => {
       </ul>
     </div>
   )
+}
+
+Numbers.propTypes = {
+  persons: PropTypes.array.isRequired,
+  filter: PropTypes.string.isRequired,
+  callback: PropTypes.func.isRequired
 }
 
 export default Numbers

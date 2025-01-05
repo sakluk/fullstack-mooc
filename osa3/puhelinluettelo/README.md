@@ -11,6 +11,7 @@ Käytetyt tunnit on kirjattu palvelinpuolen kirjanpitoon.
 - Asennettu ESLint `npm install eslint`
 - Alustettu ESLint `npx eslint --init`
 - Lisätty lint skripti package.json tiedostoon
+- Ajettu `npm run lint` useaan kertaan ja tehty tarvittavat korjaukset, mm. tarkistettu, että  `prop-types` kirjasto on asennettu ja sitä käytetään komponenteissa
 
 ## Mallipohja
 

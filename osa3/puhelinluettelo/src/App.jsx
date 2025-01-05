@@ -1,19 +1,13 @@
 // Muutettu: 30.12.2024 18:17
 import { useState, useEffect } from 'react'
+import PropTypes from 'prop-types'
 import Numbers from './components/Numbers'
 import PersonForm from './components/PersonForm'
 import Filter from './components/Filter'
 import Notification from './components/Notification'
 import phoneService from './services/persons'
 
-const Person = ({ person }) => {
-  return (
-    <li>{person.name} {person.number}</li>
-  )
-}
-
 const App = () => {
-
   const [persons, setPersons] = useState([])
   const [newName, setNewName] = useState('')
   const [newNumber, setNewNumber] = useState('')
@@ -21,23 +15,18 @@ const App = () => {
   const [newMessage, setNewMessage] = useState(null)
 
   const handlePersonChange = (event) => {
-    // console.log(event.target.value)
     setNewName(event.target.value)
   }
 
   const handleNumberChange = (event) => {
-    // console.log(event.target.value)
     setNewNumber(event.target.value)
   }
 
   const handleFilterChange = (event) => {
-    // console.log(event.target.value)
     setFilter(event.target.value)
   }
 
-  // Copilotin generoima funktio, joka poistaa henkilön listalta.
   const removePerson = id => {
-    console.log('remove', id)
     const person = persons.find(p => p.id === id)
     if (window.confirm(`Poistetaanko ${person.name}`)) {
       phoneService
@@ -45,30 +34,20 @@ const App = () => {
         .then(() => {
           setPersons(persons.filter(p => p.id !== id))
         })
-      // console.log('Person removed')
       const msg = {
         message: `Henkilö ${person.name} poistettu luettelosta.`,
         isError: false } 
       setNewMessage(msg)
-      // console.log('Message set', msg)
       setTimeout(() => { setNewMessage(null) }, 5000)
     }
   }
-  
-  const personsToShow = persons.filter(person => 
-    person.name.toLowerCase().includes(filter.toLowerCase())
-  )
 
   const addPerson = event => {
-
     event.preventDefault()
     
     const names = persons.map(person => person.name)
     if (names.includes(newName)) {
-
-      // Copilotin generoima koodi, joka kysyy käyttäjältä, haluaako hän päivittää numeron.
       if (window.confirm(`${newName} on jo luettelossa. Haluatko päivittää numeron?`)) {
-        // Päivitä numero
         const person = persons.find(p => p.name === newName)
         const changedPerson = { ...person, number: newNumber }
 
@@ -78,9 +57,8 @@ const App = () => {
             setPersons(persons.map(p => p.id !== person.id ? p : returnedPerson))
           })
           .catch(error => {
-            console.log(error.response.data)
             const msg = {
-              message: `Henkilön ${newName} puhelinnumeron vaihtaminen ei onnistunut: ${error.response.data.error}`,
+              message: `Virhe: ${error.message}.`,
               isError: true }
             setNewMessage(msg)
             setTimeout(() => { setNewMessage(null) }, 5000)
@@ -94,24 +72,20 @@ const App = () => {
         setNewName('')
         setNewNumber('')
       }
-      // Älä tee mitään, jos nimeä ei päivitetä.
       return
     }
 
-    // Luo uusi henkilö.
     const personObject = {
       name: newName,
       number: newNumber
     }
 
-    // Lisää uusi henkilö palvelimelle.
     phoneService
       .create(personObject)
       .then(returnedPerson => {
         setPersons(persons.concat(returnedPerson))
       })
       .catch(error => {
-        console.log(error.response.data)
         const msg = {
           message: `Henkilön ${newName} lisääminen ei onnistunut. virhe: ${error.response.data.error}`,
           isError: true }
@@ -121,11 +95,9 @@ const App = () => {
         setNewNumber('')
       })
 
-    // Tyhjennä kentät.
     setNewName('')
     setNewNumber('')
 
-    // Näytä viesti
     let msg = {
       message: `Henkilö ${newName} lisätty luetteloon.`,
       isError: false }
@@ -138,11 +110,8 @@ const App = () => {
       .getAll()
       .then(initialPersons => {
         setPersons(initialPersons)
-        // console.log('Persons set')
       })
   }, [])
-  // console.log('render', persons.length, 'persons')
-  // console.log('render', newMessage)
 
   return (
     <div>
@@ -162,9 +131,32 @@ const App = () => {
 
       <h2>Numerot</h2>
       <Numbers persons={persons} filter={filter} callback={removePerson}/>
-
     </div>
   )
+}
+
+// Lisätään prop-tyypit
+Numbers.propTypes = {
+  persons: PropTypes.array.isRequired,
+  filter: PropTypes.string.isRequired,
+  callback: PropTypes.func.isRequired
+}
+
+PersonForm.propTypes = {
+  addPerson: PropTypes.func.isRequired,
+  newName: PropTypes.string.isRequired,
+  handlePersonChange: PropTypes.func.isRequired,
+  newNumber: PropTypes.string.isRequired,
+  handleNumberChange: PropTypes.func.isRequired
+}
+
+Filter.propTypes = {
+  filter: PropTypes.string.isRequired,
+  handleFilterChange: PropTypes.func.isRequired
+}
+
+Notification.propTypes = {
+  msg: PropTypes.object
 }
 
 export default App

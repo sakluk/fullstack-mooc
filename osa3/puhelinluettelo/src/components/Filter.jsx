@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'
+
 const Filter = ({ filter, handleFilterChange }) => {
   return (
     <div>
@@ -7,6 +9,12 @@ const Filter = ({ filter, handleFilterChange }) => {
       /></p>
     </div>
   )
+}
+
+// Lisätään prop-tyypit
+Filter.propTypes = {
+  filter: PropTypes.string.isRequired,
+  handleFilterChange: PropTypes.func.isRequired
 }
 
 export default Filter
