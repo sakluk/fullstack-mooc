@@ -1,4 +1,3 @@
-// Muokattu notes.js esimerkin perusteella
 import axios from 'axios'
 const baseUrl = '/api/persons'
 
