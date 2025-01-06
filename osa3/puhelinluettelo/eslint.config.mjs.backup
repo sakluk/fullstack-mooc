@@ -1,11 +1,12 @@
-import globals from 'globals'
-import stylisticJs from '@stylistic/eslint-plugin-js'
+import globals from "globals"
+import stylisticJs from "@stylistic/eslint-plugin-js"
 import js from '@eslint/js'
+import reactPlugin from 'eslint-plugin-react'
 
 export default [
   js.configs.recommended,
   {
-    files: ['**/*.js'],
+    files: ['**/*.js', '**/*.jsx', '**/*.mjs'],
     languageOptions: {
       sourceType: 'module',
       globals: {
@@ -14,7 +15,8 @@ export default [
       ecmaVersion: 'latest',
     },
     plugins: {
-      '@stylistic/js': stylisticJs
+      '@stylistic/js': stylisticJs,
+      'react': reactPlugin,
     },
     rules: {
       '@stylistic/js/indent': [
@@ -39,12 +41,12 @@ export default [
         'error', 'always'
       ],
       'arrow-spacing': [
-        'error', { 'before': true, 'after': true },
+        'error', { 'before': true, 'after': true }
       ],
-      'no-console': 'off',
+      'react/jsx-uses-react': 'error',
+      'react/jsx-uses-vars': 'error',
+      'no-console': 'warn'
     },
-  },
-  {
     ignores: ['dist/**', 'build/**'],
-  },
+  }
 ]
