@@ -58,7 +58,7 @@ const App = () => {
           })
           .catch(error => {
             const msg = {
-              message: `Virhe: ${error.message}.`,
+              message: `Virhe: ${error.response.data.error}`,
               isError: true }
             setNewMessage(msg)
             setTimeout(() => { setNewMessage(null) }, 5000)
