@@ -55,3 +55,57 @@ describe('kokonaistykkäykset', () => {
     assert.strictEqual(result, 6)
   })
 })
+
+describe('suosituin blogi', () => {
+  test('tyhjä lista palauttaa tyhjän', () => {
+    const blogs = []
+    const result = listHelper.favoriteBlog(blogs)
+    assert.strictEqual(result, null)
+  })
+
+  test('yksi blogi palauttaa sen', () => {
+    const blogs = [
+      {
+        title: 'Testi 1',
+        author: 'Testaaja 1',
+        url: 'http://testi1.com',
+        likes: 1
+      }
+    ]
+    const result = listHelper.favoriteBlog(blogs)
+    assert.deepStrictEqual(result, {
+      title: 'Testi 1',
+      author: 'Testaaja 1',
+      likes: 1
+    })
+  })
+
+  test('useammasta blogista suosituin palautetaan', () => {
+    const blogs = [
+      {
+        title: 'Testi 1',
+        author: 'Testaaja 1',
+        url: 'http://testi1.com',
+        likes: 1
+      },
+      {
+        title: 'Testi 2',
+        author: 'Testaaja 2',
+        url: 'http://testi2.com',
+        likes: 2
+      },
+      {
+        title: 'Testi 3',
+        author: 'Testaaja 3',
+        url: 'http://testi3.com',
+        likes: 3
+      }
+    ]
+    const result = listHelper.favoriteBlog(blogs)
+    assert.deepStrictEqual(result, {
+      title: 'Testi 3',
+      author: 'Testaaja 3',
+      likes: 3
+    })
+  })
+})
