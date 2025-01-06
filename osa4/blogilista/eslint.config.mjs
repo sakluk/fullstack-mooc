@@ -1,17 +1,17 @@
-import globals from "globals"
+import globals from 'globals'
 import stylisticJs from '@stylistic/eslint-plugin-js'
 import js from '@eslint/js'
 
 export default [
   js.configs.recommended,
   {
-    files: ["**/*.js"],
+    files: ['**/*.js', '**/*.mjs'],
     languageOptions: {
-      sourceType: "commonjs",
+      sourceType: 'module',
       globals: {
         ...globals.node,
       },
-      ecmaVersion: "latest",
+      ecmaVersion: 'latest',
     },
     plugins: {
       '@stylistic/js': stylisticJs
@@ -44,7 +44,7 @@ export default [
       'no-console': 'off',
     },
   },
-  { 
-    ignores: ["dist/**", "build/**"],
+  {
+    ignores: ['dist/**', 'build/**'],
   },
 ]
