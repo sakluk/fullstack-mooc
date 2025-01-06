@@ -8,6 +8,7 @@ Tästä kansiosta löytyvät palautukset tehtäviin:
 | Tunnit | Yht | Kommentit |
 | ------ | --- | --------- |
 | 2 |   | Opiskeltu sovelluksen rakennetta ja testauksen alkeita ja tehty tehtävä 4.1 |
+| 2 |   | Tehty tehtävä 4.2
 |   | **2** | **Yhteensä** |
 
 ## Muistiinpanot
@@ -32,3 +33,11 @@ Tästä kansiosta löytyvät palautukset tehtäviin:
 - Tehtävä 4.1
   - Kopioitu esimerkkikoodi `index.js` tiedostoon
   - Asennettu dotenv `npm install dotenv`
+  - Testattu ja korjattu koodi
+- Tehtävä 4.2
+  - Refaktoroitu koodi kurssin esimerkin mukaan
+  - Testattu ja korjattu koodi
+- Tehtävä 4.3
+  - Lisätty utils/list_helper.js ja tests/list.test.js
+  - Lisätty "test" skripti package.json tiedostoon
+  - Testattu toimivuus `npm test`
