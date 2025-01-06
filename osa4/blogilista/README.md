@@ -58,5 +58,6 @@ Tästä kansiosta löytyvät palautukset tehtäviin:
 - Lisätty `package.json` skripteihin `NODE_ENV` muuttuja
 - Asennettu cross-env `npm install -save-dev cross-env`
 - Muutettu `config.js` ja `.env`
+- Asennettu SuperTest kirjasto `npm install --save-dev supertest`
 
 
