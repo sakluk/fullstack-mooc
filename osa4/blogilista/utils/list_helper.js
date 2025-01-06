@@ -6,6 +6,12 @@ const dummy = (blogs) => {
   return result
 }
 
+const totalLikes = (blogs) => {
+  // Copilotin kirjoittama koodi
+  return blogs.reduce((sum, blog) => sum + blog.likes, 0)
+}
+
 module.exports = {
-  dummy
+  dummy,
+  totalLikes
 }
