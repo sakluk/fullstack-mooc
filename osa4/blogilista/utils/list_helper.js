@@ -27,7 +27,6 @@ const favoriteBlog = (blogs) => {
   return result
 }
 
-const 
 module.exports = {
   dummy,
   totalLikes,
