@@ -41,3 +41,10 @@ Tästä kansiosta löytyvät palautukset tehtäviin:
   - Lisätty utils/list_helper.js ja tests/list.test.js
   - Lisätty "test" skripti package.json tiedostoon
   - Testattu toimivuus `npm test`
+- Tehtävä 4.4
+  - Määritelty funktio `totalLikes` list_helper.js tiedostoon
+  - Lisätty yksikkötestit list.test.js tiedostoon
+  - Testattu testien toiminta
+- Tehtävä 4.5*
+  - Määritelty funktio `favoriteBlog`, lisätty yksikkötestit ja testattu testien toiminta
+- (Jätetty tehtävät 4.6* ja 4.7* väliin)
