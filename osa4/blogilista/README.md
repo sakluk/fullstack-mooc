@@ -59,5 +59,6 @@ Tästä kansiosta löytyvät palautukset tehtäviin:
 - Asennettu cross-env `npm install -save-dev cross-env`
 - Muutettu `config.js` ja `.env`
 - Asennettu SuperTest kirjasto `npm install --save-dev supertest`
+- Lisätty `blogs_api.test.js`
 
 
